@@ -3,7 +3,7 @@ import Note
 
 def create_note(number):
     title = check_len_text_input(
-        input('Введите Название заметки: '), number)
+        input('Введите Заголовок заметки: '), number)
     body = check_len_text_input(
         input('Введите Описание заметки: '), number)
     return Note.Note(title=title, body=body)
@@ -15,8 +15,8 @@ def menu():
 
 def check_len_text_input(text, n):
     while len(text) <= n:
-        print(f'Текст должен быть больше {n} символов\n')
-        text = input('Введите тескт: ')
+        print(f'Заголовок должен быть больше {n} символов\n')
+        text = input('Введите заголовок: ')
     else:
         return text
 
